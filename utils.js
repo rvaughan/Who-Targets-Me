@@ -1,5 +1,7 @@
 'use strict';
 
+var response = null;
+
 function checkLoading() {
     if (response == null) {
         $("#isLoading").show();

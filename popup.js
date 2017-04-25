@@ -1,7 +1,5 @@
 'use strict';
 
-var response = null;
-
 $(document).ready(function() {
     checkLoading();
     $.get("https://who-targets-me.herokuapp.com/analytics/", function(raw_response) {
