@@ -21,7 +21,7 @@ function show_data_flare(data) {
                 .sort(null)
                 .value(function(d) { return d.instances; });
 
-    var svg = d3.select("body").append("svg")
+    var svg = d3.select("#flare")
                     .attr("width", width)
                     .attr("height", height)
                 .append("g")

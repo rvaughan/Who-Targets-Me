@@ -3,27 +3,33 @@
 <head>
     <title>Who Targets Me?!</title>
     <script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="d3.v4.min.js"></script>
     <script type="text/javascript" src="details.js"></script>
     <script type="text/javascript" src="utils.js"></script>
     <link rel="stylesheet" type="text/css" href="details.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 </head>
 <body>
     <h1>Who Targets Me?</h1>
     <div id='isLoading' class='loading'>Loading</div>
-    <div>
-        <table id='isFinished'>
-            <thead>
-                <tr>
-                    <th>Entity</th>
-                    <th>No. adverts shown</th>
-                </tr>
-            </thead>
-            <tbody>
-
-            </tbody>
-        </table>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-3">
+                <table id='isFinished'>
+                    <thead>
+                        <tr>
+                            <th>Entity</th>
+                            <th>No. adverts shown</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+            <div class="col-xs-6">
+                <svg id="flare" width="960" height="600"></svg>
+            </div>
+        </div>
     </div>
-    <div><svg id="flare"></svg></div>
 </body>
 </html>
