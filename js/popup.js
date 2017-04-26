@@ -16,4 +16,9 @@ $(document).ready(function() {
             });
             window.close();
         });
+
+    $('body').on('click', 'a', function(){
+            chrome.tabs.create({url: $(this).attr('href')});
+            return false;
+        });
 })
