@@ -1,5 +1,7 @@
 'use strict';
 
+var response = null;
+
 $(document).ready(function() {
     checkLoading();
     $.get("https://who-targets-me.herokuapp.com/analytics/", function(raw_response) {
@@ -22,3 +24,13 @@ $(document).ready(function() {
             return false;
         });
 })
+
+function checkLoading() {
+    if (response == null) {
+        $("#isLoading").show();
+        $("#isFinished").hide();
+    } else {
+        $("#isLoading").hide();
+        $("#isFinished").show();
+    }
+}
