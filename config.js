@@ -36,7 +36,7 @@ $(document).ready(function() {
 			$.post("https://who-targets-me.herokuapp.com/user/", $('#register').serialize(), function(data) {
 				console.log(data);
 				var response = jQuery.parseJSON(data);
-				userStorage.set('access_token', response.access_token, function() {
+				userStorage.set('access_token', response.data.access_token, function() {
 					console.log("User demographic data saved to server; token received.");
 					$("#loading").hide();
 					$("#finished").show();
